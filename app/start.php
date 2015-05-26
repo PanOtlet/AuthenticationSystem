@@ -4,6 +4,7 @@
  */
 
 use Slim\Slim;
+use Noodlehaus\Config;
 
 session_cache_limiter(false);
 session_start();
@@ -14,10 +15,12 @@ define('INC_ROOT', dirname(__DIR__));
 
 require INC_ROOT.'/vendor/autoload.php';
 
-$app = new Slim();
+$app = new Slim([
+    'mode'  =>  file_get_contents(INC_ROOT.'/mode.php')
+]);
 
-$app->get('/:name', function($name){
-    echo $name;
+$app->configureMode($app->config('mode'), function() use ($app){
+    $app->config    =   Config::load(INC_ROOT."/app/config/{$app->mode}.php");
 });
 
 $app->run();
