@@ -6,6 +6,8 @@
 use Slim\Slim;
 use Noodlehaus\Config;
 
+use authsys\user\User;
+
 session_cache_limiter(false);
 session_start();
 
@@ -21,6 +23,12 @@ $app = new Slim([
 
 $app->configureMode($app->config('mode'), function() use ($app){
     $app->config    =   Config::load(INC_ROOT."/app/config/{$app->mode}.php");
+});
+
+require 'database.php';
+
+$app->container->set('user', function() {
+    return new User;
 });
 
 $app->run();

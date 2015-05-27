@@ -1,4 +1,9 @@
 {
+    "autoload":{
+      "psr-4":{
+        "authsys\\": "app/authsys"
+      }
+    },
     "require": {
         "slim/slim": "^2.6",
         "slim/views": "^0.1.3",
