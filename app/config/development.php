@@ -6,7 +6,8 @@ return [
         'hash'  =>  [
             'algo'  =>  PASSWORD_BCRYPT,
             'cost'  =>  10
-        ]
+        ],
+        'template'  =>  'Default',
     ],
     'db'    =>  [
         'driver'    =>  'mysql',
