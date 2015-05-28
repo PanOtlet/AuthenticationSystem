@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>AuthSys | {% block title %}{% endblock %}</title>
+    {% include 'templates/partials/messages.twig' %}
 </head>
 <body>
-    {% include 'templates/partials/messages.twig' %}
     {% include 'templates/partials/navigation.twig' %}
     {% block content %}{% endblock %}
 </body>
