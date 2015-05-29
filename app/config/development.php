@@ -11,12 +11,12 @@ return [
     ],
     'db'    =>  [
         'driver'    =>  'mysql',
-        'host'      =>  'localhost',
+        'host'      =>  '127.0.0.1',
         'name'      =>  'authsys',
         'user'      =>  'root',
         'pass'      =>  '',
         'charset'   =>  'utf8',
-        'collaction'=>  'utf8_unicode_ci',
+        'collation' =>  'utf8_unicode_ci',
         'prefix'    =>  ''
     ],
     'auth'  =>  [
