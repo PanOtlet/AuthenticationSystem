@@ -18,6 +18,7 @@ use Noodlehaus\Config;
 use authsys\user\User;
 use authsys\helpers\hash;
 use authsys\validation\Validator;
+use authsys\middleware\BeforeMiddleware;
 
 session_cache_limiter(false);
 session_start();
@@ -34,12 +35,16 @@ $app = new Slim([
     'templates.path'    =>  INC_ROOT.'/app/views'
 ]);
 
+$app->add(new BeforeMiddleware);
+
 $app->configureMode($app->config('mode'), function() use ($app){
     $app->config    =   Config::load(INC_ROOT."/app/config/{$app->mode}.php");
 });
 
 require 'database.php';
 require 'routes.php';
+
+$app->auth = false;
 
 $app->container->set('user', function() {
     return new User;

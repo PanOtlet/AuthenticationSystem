@@ -19,4 +19,12 @@ class User extends Eloquent{
         'remember_identifier',
         'remember_token',
     ];
+
+    public function getFullName(){
+        if (!$this->first_name || !$this->last_name){
+            return "{$this->username}";
+        }
+
+        return "{$this->first_name} {$this->last_name}";
+    }
 }
