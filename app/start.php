@@ -17,6 +17,7 @@ use Noodlehaus\Config;
 //Own
 use authsys\user\User;
 use authsys\helpers\hash;
+use authsys\validation\Validator;
 
 session_cache_limiter(false);
 session_start();
@@ -46,6 +47,10 @@ $app->container->set('user', function() {
 
 $app->container->singleton('hash', function() use ($app) {
     return new Hash($app->config);
+});
+
+$app->container->singleton('validation', function() use ($app){
+    return new Validator;
 });
 
 $view = $app->view();
