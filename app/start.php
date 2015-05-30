@@ -50,7 +50,7 @@ $app->container->singleton('hash', function() use ($app) {
 });
 
 $app->container->singleton('validation', function() use ($app){
-    return new Validator;
+    return new Validator($app->user);
 });
 
 $view = $app->view();
