@@ -612,7 +612,7 @@ class SlimTest extends PHPUnit_Framework_TestCase
      ************************************************/
 
     /**
-     * Test template path is passed to view
+     * Test templates path is passed to view
      */
     public function testViewGetsTemplatesPath()
     {
@@ -622,7 +622,7 @@ class SlimTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test render with template and data
+     * Test render with templates and data
      */
     public function testRenderTemplateWithData()
     {
@@ -637,7 +637,7 @@ class SlimTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test render with template and data and status
+     * Test render with templates and data and status
      */
     public function testRenderTemplateWithDataAndStatus()
     {

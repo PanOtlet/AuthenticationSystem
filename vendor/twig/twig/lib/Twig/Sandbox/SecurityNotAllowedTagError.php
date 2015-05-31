@@ -10,7 +10,7 @@
  */
 
 /**
- * Exception thrown when a not allowed tag is used in a template.
+ * Exception thrown when a not allowed tag is used in a templates.
  *
  * @author Martin Hasoň <martin.hason@gmail.com>
  */

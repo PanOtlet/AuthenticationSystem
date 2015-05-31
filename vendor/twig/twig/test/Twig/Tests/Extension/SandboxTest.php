@@ -69,35 +69,35 @@ class Twig_Tests_Extension_SandboxTest extends PHPUnit_Framework_TestCase
         $twig = $this->getEnvironment(true, array(), self::$templates);
         try {
             $twig->loadTemplate('1_basic3')->render(self::$params);
-            $this->fail('Sandbox throws a SecurityError exception if an unallowed tag is used in the template');
+            $this->fail('Sandbox throws a SecurityError exception if an unallowed tag is used in the templates');
         } catch (Twig_Sandbox_SecurityError $e) {
         }
 
         $twig = $this->getEnvironment(true, array(), self::$templates);
         try {
             $twig->loadTemplate('1_basic4')->render(self::$params);
-            $this->fail('Sandbox throws a SecurityError exception if an unallowed property is called in the template');
+            $this->fail('Sandbox throws a SecurityError exception if an unallowed property is called in the templates');
         } catch (Twig_Sandbox_SecurityError $e) {
         }
 
         $twig = $this->getEnvironment(true, array(), self::$templates);
         try {
             $twig->loadTemplate('1_basic5')->render(self::$params);
-            $this->fail('Sandbox throws a SecurityError exception if an unallowed method (__toString()) is called in the template');
+            $this->fail('Sandbox throws a SecurityError exception if an unallowed method (__toString()) is called in the templates');
         } catch (Twig_Sandbox_SecurityError $e) {
         }
 
         $twig = $this->getEnvironment(true, array(), self::$templates);
         try {
             $twig->loadTemplate('1_basic6')->render(self::$params);
-            $this->fail('Sandbox throws a SecurityError exception if an unallowed method (__toString()) is called in the template');
+            $this->fail('Sandbox throws a SecurityError exception if an unallowed method (__toString()) is called in the templates');
         } catch (Twig_Sandbox_SecurityError $e) {
         }
 
         $twig = $this->getEnvironment(true, array(), self::$templates);
         try {
             $twig->loadTemplate('1_basic7')->render(self::$params);
-            $this->fail('Sandbox throws a SecurityError exception if an unallowed function is called in the template');
+            $this->fail('Sandbox throws a SecurityError exception if an unallowed function is called in the templates');
         } catch (Twig_Sandbox_SecurityError $e) {
         }
 

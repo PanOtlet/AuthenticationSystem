@@ -36,7 +36,7 @@ namespace Slim\Views;
  * SmartyView
  *
  * The SmartyView is a custom View class that renders templates using the Smarty
- * template language (http://www.smarty.net).
+ * templates language (http://www.smarty.net).
  *
  * Two fields that you, the developer, will need to change are:
  * - parserDirectory
@@ -76,9 +76,9 @@ class Smarty extends \Slim\View
     /**
      * Render Template
      *
-     * This method will output the rendered template content
+     * This method will output the rendered templates content
      *
-     * @param string $template The path to the template, relative to the  templates directory.
+     * @param string $template The path to the templates, relative to the  templates directory.
      * @param null $data
      * @return string
      */

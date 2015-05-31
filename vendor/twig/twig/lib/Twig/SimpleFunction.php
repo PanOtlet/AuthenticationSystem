@@ -10,7 +10,7 @@
  */
 
 /**
- * Represents a template function.
+ * Represents a templates function.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */

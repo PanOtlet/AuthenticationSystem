@@ -25,7 +25,7 @@ use Symfony\Component\Translation\MessageCatalogue;
 abstract class FileDumper implements DumperInterface
 {
     /**
-     * A template for the relative paths to files.
+     * A templates for the relative paths to files.
      *
      * @var string
      */
@@ -39,9 +39,9 @@ abstract class FileDumper implements DumperInterface
     private $backup = true;
 
     /**
-     * Sets the template for the relative paths to files.
+     * Sets the templates for the relative paths to files.
      *
-     * @param string $relativePathTemplate A template for the relative paths to files
+     * @param string $relativePathTemplate A templates for the relative paths to files
      */
     public function setRelativePathTemplate($relativePathTemplate)
     {
@@ -104,7 +104,7 @@ abstract class FileDumper implements DumperInterface
     abstract protected function getExtension();
 
     /**
-     * Gets the relative file path using the template.
+     * Gets the relative file path using the templates.
      *
      * @param string $domain The domain
      * @param string $locale The locale

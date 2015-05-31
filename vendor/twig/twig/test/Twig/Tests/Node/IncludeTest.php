@@ -73,7 +73,7 @@ EOF
 try {
     \$this->loadTemplate("foo.twig", null, 1)->display(array("foo" => true));
 } catch (Twig_Error_Loader \$e) {
-    // ignore missing template
+    // ignore missing templates
 }
 EOF
         );

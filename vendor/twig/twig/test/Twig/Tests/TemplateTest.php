@@ -17,7 +17,7 @@ class Twig_Tests_TemplateTest extends PHPUnit_Framework_TestCase
     {
         $name = 'index_'.($useExt ? 1 : 0);
         $templates = array(
-            $name => $template.$useExt, // appending $useExt makes the template content unique
+            $name => $template.$useExt, // appending $useExt makes the templates content unique
         );
 
         $env = new Twig_Environment(new Twig_Loader_Array($templates), array('strict_variables' => true));
@@ -57,7 +57,7 @@ class Twig_Tests_TemplateTest extends PHPUnit_Framework_TestCase
             array('{{ attribute(array, -10) }}', 'Key "-10" for array with keys "foo" does not exist in "%s" at line 1', false),
             array('{{ array_access.a }}', 'Method "a" for object "Twig_TemplateArrayAccessObject" does not exist in "%s" at line 1', false),
             array('{% macro foo(obj) %}{{ obj.missing_method() }}{% endmacro %}{{ _self.foo(array_access) }}', 'Method "missing_method" for object "Twig_TemplateArrayAccessObject" does not exist in "%s" at line 1', false),
-            array('{{ magic_exception.test }}', 'An exception has been thrown during the rendering of a template ("Hey! Don\'t try to isset me!") in "%s" at line 1.', false),
+            array('{{ magic_exception.test }}', 'An exception has been thrown during the rendering of a templates ("Hey! Don\'t try to isset me!") in "%s" at line 1.', false),
             array('{{ object["a"] }}', 'Impossible to access a key "a" on an object of class "stdClass" that does not implement ArrayAccess interface in "%s" at line 1', false),
         );
 

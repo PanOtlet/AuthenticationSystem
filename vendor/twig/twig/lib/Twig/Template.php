@@ -38,9 +38,9 @@ abstract class Twig_Template implements Twig_TemplateInterface
     }
 
     /**
-     * Returns the template name.
+     * Returns the templates name.
      *
-     * @return string The template name
+     * @return string The templates name
      */
     abstract public function getTemplateName();
 
@@ -53,12 +53,12 @@ abstract class Twig_Template implements Twig_TemplateInterface
     }
 
     /**
-     * Returns the parent template.
+     * Returns the parent templates.
      *
      * This method is for internal use only and should never be called
      * directly.
      *
-     * @return Twig_TemplateInterface|false The parent template or false if there is no parent
+     * @return Twig_TemplateInterface|false The parent templates or false if there is no parent
      */
     public function getParent(array $context)
     {
@@ -119,7 +119,7 @@ abstract class Twig_Template implements Twig_TemplateInterface
         } elseif (false !== $parent = $this->getParent($context)) {
             $parent->displayBlock($name, $context, $blocks, false);
         } else {
-            throw new Twig_Error_Runtime(sprintf('The template has no parent and no traits defining the "%s" block', $name), -1, $this->getTemplateName());
+            throw new Twig_Error_Runtime(sprintf('The templates has no parent and no traits defining the "%s" block', $name), -1, $this->getTemplateName());
         }
     }
 
@@ -155,7 +155,7 @@ abstract class Twig_Template implements Twig_TemplateInterface
             } catch (Twig_Error $e) {
                 throw $e;
             } catch (Exception $e) {
-                throw new Twig_Error_Runtime(sprintf('An exception has been thrown during the rendering of a template ("%s").', $e->getMessage()), -1, $template->getTemplateName(), $e);
+                throw new Twig_Error_Runtime(sprintf('An exception has been thrown during the rendering of a templates ("%s").', $e->getMessage()), -1, $template->getTemplateName(), $e);
             }
         } elseif (false !== $parent = $this->getParent($context)) {
             $parent->displayBlock($name, $context, array_merge($this->blocks, $blocks), false);
@@ -209,11 +209,11 @@ abstract class Twig_Template implements Twig_TemplateInterface
      * This method is for internal use only and should never be called
      * directly.
      *
-     * This method does only return blocks defined in the current template
+     * This method does only return blocks defined in the current templates
      * or defined in "used" traits.
      *
      * It does not return blocks from parent templates as the parent
-     * template name can be dynamic, which is only known based on the
+     * templates name can be dynamic, which is only known based on the
      * current context.
      *
      * @param string $name The block name
@@ -325,15 +325,15 @@ abstract class Twig_Template implements Twig_TemplateInterface
 
             throw $e;
         } catch (Exception $e) {
-            throw new Twig_Error_Runtime(sprintf('An exception has been thrown during the rendering of a template ("%s").', $e->getMessage()), -1, $this->getTemplateName(), $e);
+            throw new Twig_Error_Runtime(sprintf('An exception has been thrown during the rendering of a templates ("%s").', $e->getMessage()), -1, $this->getTemplateName(), $e);
         }
     }
 
     /**
-     * Auto-generated method to display the template with the given context.
+     * Auto-generated method to display the templates with the given context.
      *
-     * @param array $context An array of parameters to pass to the template
-     * @param array $blocks  An array of blocks to pass to the template
+     * @param array $context An array of parameters to pass to the templates
+     * @param array $blocks  An array of blocks to pass to the templates
      */
     abstract protected function doDisplay(array $context, array $blocks = array());
 
@@ -504,7 +504,7 @@ abstract class Twig_Template implements Twig_TemplateInterface
             throw $e;
         }
 
-        // useful when calling a template method from a template
+        // useful when calling a templates method from a templates
         // this is not supported but unfortunately heavily used in the Symfony profiler
         if ($object instanceof Twig_TemplateInterface) {
             return $ret === '' ? '' : new Twig_Markup($ret, $this->env->getCharset());

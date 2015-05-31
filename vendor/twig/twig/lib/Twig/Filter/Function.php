@@ -10,7 +10,7 @@
  */
 
 /**
- * Represents a function template filter.
+ * Represents a function templates filter.
  *
  * Use Twig_SimpleFilter instead.
  *

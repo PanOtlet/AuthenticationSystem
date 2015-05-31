@@ -23,24 +23,24 @@ interface Twig_TemplateInterface
     const METHOD_CALL = 'method';
 
     /**
-     * Renders the template with the given context and returns it as string.
+     * Renders the templates with the given context and returns it as string.
      *
-     * @param array $context An array of parameters to pass to the template
+     * @param array $context An array of parameters to pass to the templates
      *
-     * @return string The rendered template
+     * @return string The rendered templates
      */
     public function render(array $context);
 
     /**
-     * Displays the template with the given context.
+     * Displays the templates with the given context.
      *
-     * @param array $context An array of parameters to pass to the template
-     * @param array $blocks  An array of blocks to pass to the template
+     * @param array $context An array of parameters to pass to the templates
+     * @param array $blocks  An array of blocks to pass to the templates
      */
     public function display(array $context, array $blocks = array());
 
     /**
-     * Returns the bound environment for this template.
+     * Returns the bound environment for this templates.
      *
      * @return Twig_Environment The current environment
      */

@@ -10,11 +10,11 @@
  */
 
 /**
- * Loads a template from an array.
+ * Loads a templates from an array.
  *
  * When using this loader with a cache mechanism, you should know that a new cache
- * key is generated each time a template content "changes" (the cache key being the
- * source code of the template). If you don't want to see your cache grows out of
+ * key is generated each time a templates content "changes" (the cache key being the
+ * source code of the templates). If you don't want to see your cache grows out of
  * control, you need to take care of clearing the old cache file by yourself.
  *
  * This loader should only be used for unit testing.
@@ -38,10 +38,10 @@ class Twig_Loader_Array implements Twig_LoaderInterface, Twig_ExistsLoaderInterf
     }
 
     /**
-     * Adds or overrides a template.
+     * Adds or overrides a templates.
      *
-     * @param string $name     The template name
-     * @param string $template The template source
+     * @param string $name     The templates name
+     * @param string $template The templates source
      */
     public function setTemplate($name, $template)
     {

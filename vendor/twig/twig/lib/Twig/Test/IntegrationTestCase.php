@@ -129,7 +129,7 @@ abstract class Twig_Test_IntegrationTestCase extends PHPUnit_Framework_TestCase
             $expected = trim($match[3], "\n ");
 
             if ($expected != $output) {
-                echo 'Compiled template that failed:';
+                echo 'Compiled templates that failed:';
 
                 foreach (array_keys($templates) as $name) {
                     echo "Template: $name\n";

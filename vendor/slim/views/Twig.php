@@ -36,7 +36,7 @@ namespace Slim\Views;
  * Twig view
  *
  * The Twig view is a custom View class that renders templates using the Twig
- * template language (http://www.twig-project.org/).
+ * templates language (http://www.twig-project.org/).
  *
  * Two fields that you, the developer, will need to change are:
  * - parserDirectory
@@ -52,7 +52,7 @@ class Twig extends \Slim\View
     /**
      * DEPRECATION WARNING! This method will be removed in the next major point release
      *
-     * @var array Paths to directories to attempt to load Twig template from
+     * @var array Paths to directories to attempt to load Twig templates from
      */
     public $twigTemplateDirs = array();
 
@@ -75,9 +75,9 @@ class Twig extends \Slim\View
     /**
      * Render Twig Template
      *
-     * This method will output the rendered template content
+     * This method will output the rendered templates content
      *
-     * @param string $template The path to the Twig template, relative to the Twig templates directory.
+     * @param string $template The path to the Twig templates, relative to the Twig templates directory.
      * @param null $data
      * @return string
      */
@@ -136,7 +136,7 @@ class Twig extends \Slim\View
     /**
      * DEPRECATION WARNING! This method will be removed in the next major point release
      *
-     * Get a list of template directories
+     * Get a list of templates directories
      *
      * Returns an array of templates defined by self::$twigTemplateDirs, falls
      * back to Slim\View's built-in getTemplatesDirectory method.

@@ -10,7 +10,7 @@
  */
 
 /**
- * Represents a template function.
+ * Represents a templates function.
  *
  * Use Twig_SimpleFunction instead.
  *

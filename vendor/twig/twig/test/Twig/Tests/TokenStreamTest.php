@@ -41,7 +41,7 @@ class Twig_Tests_TokenStreamTest extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException Twig_Error_Syntax
-     * @expectedMessage   Unexpected end of template
+     * @expectedMessage   Unexpected end of templates
      */
     public function testEndOfTemplateNext()
     {
@@ -55,7 +55,7 @@ class Twig_Tests_TokenStreamTest extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException Twig_Error_Syntax
-     * @expectedMessage   Unexpected end of template
+     * @expectedMessage   Unexpected end of templates
      */
     public function testEndOfTemplateLook()
     {

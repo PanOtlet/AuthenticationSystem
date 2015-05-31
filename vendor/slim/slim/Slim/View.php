@@ -35,12 +35,12 @@ namespace Slim;
 /**
  * View
  *
- * The view is responsible for rendering a template. The view
+ * The view is responsible for rendering a templates. The view
  * should subclass \Slim\View and implement this interface:
  *
- * public render(string $template);
+ * public render(string $templates);
  *
- * This method should render the specified template and return
+ * This method should render the specified templates and return
  * the resultant string.
  *
  * @package Slim
@@ -194,7 +194,7 @@ class View
     }
 
     /********************************************************************************
-     * Resolve template paths
+     * Resolve templates paths
      *******************************************************************************/
 
     /**
@@ -217,8 +217,8 @@ class View
     }
 
     /**
-     * Get fully qualified path to template file using templates base directory
-     * @param  string $file The template file pathname relative to templates base directory
+     * Get fully qualified path to templates file using templates base directory
+     * @param  string $file The templates file pathname relative to templates base directory
      * @return string
      */
     public function getTemplatePathname($file)
@@ -231,12 +231,12 @@ class View
      *******************************************************************************/
 
     /**
-     * Display template
+     * Display templates
      *
-     * This method echoes the rendered template to the current output buffer
+     * This method echoes the rendered templates to the current output buffer
      *
-     * @param  string   $template   Pathname of template file relative to templates directory
-     * @param  array    $data       Any additonal data to be passed to the template.
+     * @param  string   $template   Pathname of templates file relative to templates directory
+     * @param  array    $data       Any additonal data to be passed to the templates.
      */
     public function display($template, $data = null)
     {
@@ -244,11 +244,11 @@ class View
     }
 
     /**
-     * Return the contents of a rendered template file
+     * Return the contents of a rendered templates file
      *
-     * @param    string $template   The template pathname, relative to the template base directory
-     * @param    array  $data       Any additonal data to be passed to the template.
-     * @return string               The rendered template
+     * @param    string $template   The templates pathname, relative to the templates base directory
+     * @param    array  $data       Any additonal data to be passed to the templates.
+     * @return string               The rendered templates
      */
     public function fetch($template, $data = null)
     {
@@ -256,20 +256,20 @@ class View
     }
 
     /**
-     * Render a template file
+     * Render a templates file
      *
      * NOTE: This method should be overridden by custom view subclasses
      *
-     * @param  string $template     The template pathname, relative to the template base directory
-     * @param  array  $data         Any additonal data to be passed to the template.
-     * @return string               The rendered template
-     * @throws \RuntimeException    If resolved template pathname is not a valid file
+     * @param  string $template     The templates pathname, relative to the templates base directory
+     * @param  array  $data         Any additonal data to be passed to the templates.
+     * @return string               The rendered templates
+     * @throws \RuntimeException    If resolved templates pathname is not a valid file
      */
     protected function render($template, $data = null)
     {
         $templatePathname = $this->getTemplatePathname($template);
         if (!is_file($templatePathname)) {
-            throw new \RuntimeException("View cannot render `$template` because the template does not exist");
+            throw new \RuntimeException("View cannot render `$template` because the templates does not exist");
         }
 
         $data = array_merge($this->data->all(), (array) $data);

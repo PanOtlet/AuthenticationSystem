@@ -22,7 +22,7 @@ class Twig_Tests_Loader_FilesystemTest extends PHPUnit_Framework_TestCase
             $loader->getCacheKey($template);
             $this->fail();
         } catch (Twig_Error_Loader $e) {
-            $this->assertNotContains('Unable to find template', $e->getMessage());
+            $this->assertNotContains('Unable to find templates', $e->getMessage());
         }
     }
 
@@ -112,7 +112,7 @@ class Twig_Tests_Loader_FilesystemTest extends PHPUnit_Framework_TestCase
             $loader->getSource('@named/nowhere.html');
         } catch (Exception $e) {
             $this->assertInstanceof('Twig_Error_Loader', $e);
-            $this->assertContains('Unable to find template "@named/nowhere.html"', $e->getMessage());
+            $this->assertContains('Unable to find templates "@named/nowhere.html"', $e->getMessage());
         }
     }
 
@@ -151,9 +151,9 @@ class Twig_Tests_Loader_FilesystemTest extends PHPUnit_Framework_TestCase
     {
         return array(
             'valid array inheritance' => array('array_inheritance_valid_parent.html.twig'),
-            'array inheritance with null first template' => array('array_inheritance_null_parent.html.twig'),
-            'array inheritance with empty first template' => array('array_inheritance_empty_parent.html.twig'),
-            'array inheritance with non-existent first template' => array('array_inheritance_nonexistent_parent.html.twig'),
+            'array inheritance with null first templates' => array('array_inheritance_null_parent.html.twig'),
+            'array inheritance with empty first templates' => array('array_inheritance_empty_parent.html.twig'),
+            'array inheritance with non-existent first templates' => array('array_inheritance_nonexistent_parent.html.twig'),
         );
     }
 

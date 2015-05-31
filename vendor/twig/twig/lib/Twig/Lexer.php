@@ -11,7 +11,7 @@
  */
 
 /**
- * Lexes a template string.
+ * Lexes a templates string.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */
@@ -141,7 +141,7 @@ class Twig_Lexer implements Twig_LexerInterface
 
     protected function lexData()
     {
-        // if no matches are left we return the rest of the template as simple text token
+        // if no matches are left we return the rest of the templates as simple text token
         if ($this->position == count($this->positions[0]) - 1) {
             $this->pushToken(Twig_Token::TEXT_TYPE, substr($this->code, $this->cursor));
             $this->cursor = $this->end;
@@ -158,7 +158,7 @@ class Twig_Lexer implements Twig_LexerInterface
             $position = $this->positions[0][++$this->position];
         }
 
-        // push the template text first
+        // push the templates text first
         $text = $textContent = substr($this->code, $this->cursor, $position[1] - $this->cursor);
         if (isset($this->positions[2][$this->position][0])) {
             $text = rtrim($text);

@@ -11,7 +11,7 @@
  */
 
 /**
- * Represents a function template function.
+ * Represents a function templates function.
  *
  * Use Twig_SimpleFunction instead.
  *

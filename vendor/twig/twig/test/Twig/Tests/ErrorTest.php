@@ -48,7 +48,7 @@ class Twig_Tests_ErrorTest extends PHPUnit_Framework_TestCase
 
             $this->fail();
         } catch (Twig_Error_Runtime $e) {
-            $this->assertEquals('An exception has been thrown during the rendering of a template ("Runtime error...") in "index.html" at line 3.', $e->getMessage());
+            $this->assertEquals('An exception has been thrown during the rendering of a templates ("Runtime error...") in "index.html" at line 3.', $e->getMessage());
             $this->assertEquals(3, $e->getTemplateLine());
             $this->assertEquals('index.html', $e->getTemplateFile());
         }
@@ -79,7 +79,7 @@ class Twig_Tests_ErrorTest extends PHPUnit_Framework_TestCase
 
             $this->fail();
         } catch (Twig_Error_Runtime $e) {
-            $this->assertEquals(sprintf('An exception has been thrown during the rendering of a template ("Runtime error...") in "%s" at line %d.', $name, $line), $e->getMessage());
+            $this->assertEquals(sprintf('An exception has been thrown during the rendering of a templates ("Runtime error...") in "%s" at line %d.', $name, $line), $e->getMessage());
             $this->assertEquals($line, $e->getTemplateLine());
             $this->assertEquals($name, $e->getTemplateFile());
         }
@@ -88,7 +88,7 @@ class Twig_Tests_ErrorTest extends PHPUnit_Framework_TestCase
     public function getErroredTemplates()
     {
         return array(
-            // error occurs in a template
+            // error occurs in a templates
             array(
                 array(
                     'index' => "\n\n{{ foo.bar }}\n\n\n{{ 'foo' }}",
@@ -96,7 +96,7 @@ class Twig_Tests_ErrorTest extends PHPUnit_Framework_TestCase
                 'index', 3,
             ),
 
-            // error occurs in an included template
+            // error occurs in an included templates
             array(
                 array(
                     'index'   => "{% include 'partial' %}",

@@ -737,14 +737,14 @@ class Slim
     *******************************************************************************/
 
     /**
-     * Render a template
+     * Render a templates
      *
      * Call this method within a GET, POST, PUT, PATCH, DELETE, NOT FOUND, or ERROR
-     * callable to render a template whose output is appended to the
-     * current HTTP response body. How the template is rendered is
+     * callable to render a templates whose output is appended to the
+     * current HTTP response body. How the templates is rendered is
      * delegated to the current View.
      *
-     * @param  string $template The name of the template passed into the view's render() method
+     * @param  string $template The name of the templates passed into the view's render() method
      * @param  array  $data     Associative array of data made available to the view
      * @param  int    $status   The HTTP response status code to use (optional)
      */
@@ -1028,7 +1028,7 @@ class Slim
      * Stop the application and immediately send the response with a
      * specific status and body to the HTTP client. This may send any
      * type of response: info, success, redirect, client error, or server error.
-     * If you need to render a template AND customize the response status,
+     * If you need to render a templates AND customize the response status,
      * use the application's `render()` method instead.
      *
      * @param  int      $status     The HTTP response status
@@ -1412,12 +1412,12 @@ class Slim
     }
 
     /**
-     * Generate diagnostic template markup
+     * Generate diagnostic templates markup
      *
      * This method accepts a title and body content to generate an HTML document layout.
      *
-     * @param  string   $title  The title of the HTML template
-     * @param  string   $body   The body content of the HTML template
+     * @param  string   $title  The title of the HTML templates
+     * @param  string   $body   The body content of the HTML templates
      * @return string
      */
     protected static function generateTemplateMarkup($title, $body)

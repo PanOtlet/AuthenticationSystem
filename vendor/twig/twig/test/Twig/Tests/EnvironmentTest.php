@@ -149,7 +149,7 @@ class Twig_Tests_EnvironmentTest extends PHPUnit_Framework_TestCase
         }
         file_put_contents($cache, $twig->compileSource('{{ foo }}', 'index'));
 
-        // check that extensions won't be initialized when rendering a template that is already in the cache
+        // check that extensions won't be initialized when rendering a templates that is already in the cache
         $twig = $this
             ->getMockBuilder('Twig_Environment')
             ->setConstructorArgs(array($loader, $options))
@@ -159,7 +159,7 @@ class Twig_Tests_EnvironmentTest extends PHPUnit_Framework_TestCase
 
         $twig->expects($this->never())->method('initExtensions');
 
-        // render template
+        // render templates
         $output = $twig->render('index', array('foo' => 'bar'));
         $this->assertEquals('bar', $output);
 

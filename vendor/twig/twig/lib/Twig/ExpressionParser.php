@@ -321,7 +321,7 @@ class Twig_ExpressionParser
                 }
 
                 if (!$this->parser->getParent() && !$this->parser->hasTraits()) {
-                    throw new Twig_Error_Syntax('Calling "parent" on a template that does not extend nor "use" another template is forbidden', $line, $this->parser->getFilename());
+                    throw new Twig_Error_Syntax('Calling "parent" on a templates that does not extend nor "use" another templates is forbidden', $line, $this->parser->getFilename());
                 }
 
                 return new Twig_Node_Expression_Parent($this->parser->peekBlockStack(), $line);
@@ -382,7 +382,7 @@ class Twig_ExpressionParser
                 throw new Twig_Error_Syntax('Expected name or number', $lineno, $this->parser->getFilename());
             }
 
-            if ($node instanceof Twig_Node_Expression_Name && null !== $this->parser->getImportedSymbol('template', $node->getAttribute('name'))) {
+            if ($node instanceof Twig_Node_Expression_Name && null !== $this->parser->getImportedSymbol('templates', $node->getAttribute('name'))) {
                 if (!$arg instanceof Twig_Node_Expression_Constant) {
                     throw new Twig_Error_Syntax(sprintf('Dynamic macro names are not supported (called on "%s")', $node->getAttribute('name')), $token->getLine(), $this->parser->getFilename());
                 }

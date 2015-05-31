@@ -11,7 +11,7 @@
  */
 
 /**
- * Marks a section of a template as being reusable.
+ * Marks a section of a templates as being reusable.
  *
  * <pre>
  *  {% block head %}

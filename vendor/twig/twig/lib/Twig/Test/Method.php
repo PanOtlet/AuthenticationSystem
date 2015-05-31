@@ -10,7 +10,7 @@
  */
 
 /**
- * Represents a method template test.
+ * Represents a method templates test.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  * @deprecated since 1.12 (to be removed in 2.0)
