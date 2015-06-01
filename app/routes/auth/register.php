@@ -24,13 +24,18 @@ $app->post('/register', function() use ($app){
     ]);
 
     if ($v->passes()){
+
+        $identifier = $app->randomlib->generateString(128);
+
         $user = $app->user->create([
-            'email' =>  $email,
-            'username'  =>  $username,
-            'password'  =>  $app->hash->password($password)
+            'email'         =>  $email,
+            'username'      =>  $username,
+            'password'      =>  $app->hash->password($password),
+            'active'        =>  false,
+            'active_hash'   =>  $app->hash->hash($identifier)
         ]);
 
-        $app->mail->send('email/auth/registered.twig', ['user' => $user], function($message) use ($user){
+        $app->mail->send('email/auth/registered.twig', ['user' => $user, 'identifier' => $identifier], function($message) use ($user){
             $message->to($user->email);
             $message->subject('Thanks for registering.');
         });

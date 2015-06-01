@@ -18,11 +18,11 @@ $app->post('/login', function() use ($app){
     $v->validate([
         'identifier' =>  [$identifier, 'required'],
         'password' =>  [$password, 'required'],
-
     ]);
 
     if ($v->passes()){
         $user = $app->user
+            ->where('active', true)
             ->where('username', $identifier)
             ->orWhere('email', $identifier)
             ->first();

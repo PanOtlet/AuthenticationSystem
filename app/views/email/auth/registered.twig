@@ -1,5 +1,7 @@
 {% extends 'email/templates/default.twig' %}
 
 {% block content %}
-    Zostałeś zarejestrowany
+    <p>Zostałeś zarejestrowany</p>
+    <p>Aktywuj konto tym linkiem: {{ baseUrl }}{{ urlFor('activate') }}?email={{ user.email }}&identifier={{ identifier|url_encode }}</p>
+
 {% endblock %}

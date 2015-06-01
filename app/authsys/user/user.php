@@ -27,4 +27,11 @@ class User extends Eloquent{
 
         return "{$this->first_name} {$this->last_name}";
     }
+
+    public function activateAccount(){
+        $this->update([
+            'active'        =>  true,
+            'active_hash'   =>  null
+        ]);
+    }
 }
