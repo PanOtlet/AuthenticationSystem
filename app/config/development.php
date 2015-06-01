@@ -25,9 +25,9 @@ return [
     'mail'  =>  [
         'auth'      =>  true,
         'secure'    =>  'tls',
-        'host'      =>  'smtp.dpoczta.pl',
-        'username'  =>  'otlet@jest.guru',
-        'password'  =>  'xxxxxx',
+        'host'      =>  'smtp.emaillabs.net.pl',
+        'username'  =>  '1.panotlet.smtp',
+        'password'  =>  'Kurwamac1',
         'port'      =>  '587',
         'html'      =>  'true'
     ],

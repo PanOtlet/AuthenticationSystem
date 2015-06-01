@@ -5,6 +5,8 @@
 
 $app->get('/', function() use ($app){
 
+    echo $app->randomlib->generateString(128);
+
     $app->render('home.twig');
 })->name('home');
 

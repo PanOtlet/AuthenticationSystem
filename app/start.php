@@ -13,6 +13,7 @@ use Slim\Views\TwigExtension;
 
 //External
 use Noodlehaus\Config;
+use RandomLib\Factory as RandomLib;
 
 //Own
 use authsys\user\User;
@@ -62,6 +63,7 @@ $app->container->singleton('validation', function() use ($app){
 $app->container->singleton('mail', function() use($app){
     $mailer = new PHPMailer;
 
+    $mailer->IsSMTP();
     $mailer->Host       =   $app->config->get('mail.host');
     $mailer->SMTPAuth   =   $app->config->get('mail.smtp_auth');
     $mailer->SMTPSecure =   $app->config->get('mail.smtp_secure');
@@ -72,6 +74,11 @@ $app->container->singleton('mail', function() use($app){
     $mailer->isHTML($app->config->get('mail.html'));
 
     return new Mailer($app->view, $mailer);
+});
+
+$app->container->singleton('randomlib', function(){
+    $factory = new RandomLib;
+    return $factory->getMediumStrengthGenerator();
 });
 
 $view = $app->view();

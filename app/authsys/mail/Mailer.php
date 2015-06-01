@@ -17,6 +17,9 @@ class Mailer{
     public function send($template, $data, $callback){
         $message = new Message($this->mailer);
 
+        $this->mailer->From = "otlet@jest.guru";
+        $this->mailer->FromName = "No Reply";
+
         $this->view->appendData($data);
 
         $message->body($this->view->render($template));
