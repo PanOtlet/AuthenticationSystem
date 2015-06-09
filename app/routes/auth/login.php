@@ -4,11 +4,11 @@
  */
 
 
-$app->get('/login', function() use ($app){
+$app->get('/login', $guest(), function() use ($app){
     $app->render('auth/login.twig');
 })->name('login');
 
-$app->post('/login', function() use ($app){
+$app->post('/login', $guest(), function() use ($app){
     $request = $app->request;
 
     $identifier =   $request->post('identifier');

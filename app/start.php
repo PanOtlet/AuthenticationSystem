@@ -44,6 +44,7 @@ $app->configureMode($app->config('mode'), function() use ($app){
 });
 
 require 'database.php';
+require 'filters.php';
 require 'routes.php';
 
 $app->auth = false;

@@ -3,11 +3,11 @@
  * Author: PanOtlet
  */
 
-$app->get('/register', function() use ($app){
+$app->get('/register', $guest(), function() use ($app){
     $app->render('auth/register.twig');
 })->name('register');
 
-$app->post('/register', function() use ($app){
+$app->post('/register', $guest(), function() use ($app){
 
     $request    =   $app->request;
     $email      =   $request->post('email');
