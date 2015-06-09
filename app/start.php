@@ -21,6 +21,7 @@ use authsys\helpers\hash;
 use authsys\mail\Mailer;
 use authsys\validation\Validator;
 use authsys\middleware\BeforeMiddleware;
+use authsys\middleware\CsrfMiddleware;
 
 session_cache_limiter(false);
 session_start();
@@ -38,6 +39,7 @@ $app = new Slim([
 ]);
 
 $app->add(new BeforeMiddleware);
+$app->add(new CsrfMiddleware);
 
 $app->configureMode($app->config('mode'), function() use ($app){
     $app->config    =   Config::load(INC_ROOT."/app/config/{$app->mode}.php");
@@ -77,7 +79,7 @@ $app->container->singleton('mail', function() use($app){
     return new Mailer($app->view, $mailer);
 });
 
-$app->container->singleton('randomlib', function(){
+$app->container->singleton('randomLib', function(){
     $factory = new RandomLib;
     return $factory->getMediumStrengthGenerator();
 });

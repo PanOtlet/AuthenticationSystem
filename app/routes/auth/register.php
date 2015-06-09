@@ -25,7 +25,7 @@ $app->post('/register', $guest(), function() use ($app){
 
     if ($v->passes()){
 
-        $identifier = $app->randomlib->generateString(128);
+        $identifier = $app->randomLib->generateString(128);
 
         $user = $app->user->create([
             'email'         =>  $email,
