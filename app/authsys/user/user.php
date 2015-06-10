@@ -34,4 +34,9 @@ class User extends Eloquent{
             'active_hash'   =>  null
         ]);
     }
+
+    public function getAvatarUrl($option = []){
+        $size = isset($option['size'])? $option['size']: 45;
+        return "http://www.gravatar.com/avatar/".md5($this->email).'?s='.$size.'&d=retro';
+    }
 }
