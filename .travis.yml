@@ -7,3 +7,4 @@ php:
   - nightly
 env:
   - DB=mysql
+script: phpunit
