@@ -12,7 +12,7 @@
         <div>
             <label for="password">Password</label>
             <input type="password" name="password" id="password">
-            {% if errors.has('password') %}{{ errors.*('password') }}{% endif %}
+            {% if errors.has('password') %}{{ errors.first('password') }}{% endif %}
         </div>
         <div>
             <input type="checkbox" name="remember" id="remember"/><label for="remember">Remember me</label>
@@ -20,6 +20,7 @@
         <div>
             <input type="submit" value="Log in">
         </div>
+        <a href="{{ urlFor('password.recover') }}">Forgot your password?</a>
         <input type="hidden" name="{{ csrf_key }}" value="{{ csrf_token }}">
     </form>
 {% endblock %}
