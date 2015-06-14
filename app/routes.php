@@ -17,3 +17,13 @@ foreach (glob(INC_ROOT."/app/routes/user/*.php") as $filename)
 {
     require $filename;
 }
+
+foreach (glob(INC_ROOT."/app/routes/admin/*.php") as $filename)
+{
+    require $filename;
+}
+
+foreach (glob(INC_ROOT."/app/routes/errors/*.php") as $filename)
+{
+    require $filename;
+}

@@ -50,4 +50,16 @@ class User extends Eloquent{
     public function removeRememberCredentials(){
         $this->updateRememberCredentials(null,null);
     }
+
+    public function hasPermissions($permission){
+        return (bool)$this->permissions->{$permission};
+    }
+
+    public function isAdmin(){
+        return $this->hasPermissions('is_admin');
+    }
+
+    public function permissions(){
+        return $this->hasOne('authsys\user\UserPermission', 'user_id');
+    }
 }

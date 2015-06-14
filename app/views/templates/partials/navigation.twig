@@ -8,9 +8,16 @@
     {% if auth %}
         <li><a href="{{ urlFor('logout') }}">Wyloguj</a></li>
         <li><a href="{{ urlFor('user.profile', {username: auth.username}) }}">Twój profil</a></li>
+        {% if auth.isAdmin %}
+        <li><a href="{{ urlFor('admin.example') }}">Admin Area</a></li>
+        {% endif %}
     {% else %}
     <li><a href="{{ urlFor('login') }}">Logowanie</a></li>
     <li><a href="{{ urlFor('register') }}">Rejestracja</a></li>
     {% endif %}
     <li><a href="{{ urlFor('user.all') }}">All users</a></li>
 </ul>
+
+{% if auth.hasPermissions('can_post_topic') %}
+    Can post topic
+{% endif %}
