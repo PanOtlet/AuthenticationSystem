@@ -3,28 +3,28 @@
 interface Guard {
 
 	/**
-	 * Determine if the current user is authenticated.
+	 * Determine if the current User is authenticated.
 	 *
 	 * @return bool
 	 */
 	public function check();
 
 	/**
-	 * Determine if the current user is a guest.
+	 * Determine if the current User is a guest.
 	 *
 	 * @return bool
 	 */
 	public function guest();
 
 	/**
-	 * Get the currently authenticated user.
+	 * Get the currently authenticated User.
 	 *
 	 * @return \Illuminate\Contracts\Auth\Authenticatable|null
 	 */
 	public function user();
 
 	/**
-	 * Log a user into the application without sessions or cookies.
+	 * Log a User into the application without sessions or cookies.
 	 *
 	 * @param  array  $credentials
 	 * @return bool
@@ -32,7 +32,7 @@ interface Guard {
 	public function once(array $credentials = array());
 
 	/**
-	 * Attempt to authenticate a user using the given credentials.
+	 * Attempt to authenticate a User using the given credentials.
 	 *
 	 * @param  array  $credentials
 	 * @param  bool   $remember
@@ -58,7 +58,7 @@ interface Guard {
 	public function onceBasic($field = 'email');
 
 	/**
-	 * Validate a user's credentials.
+	 * Validate a User's credentials.
 	 *
 	 * @param  array  $credentials
 	 * @return bool
@@ -66,7 +66,7 @@ interface Guard {
 	public function validate(array $credentials = array());
 
 	/**
-	 * Log a user into the application.
+	 * Log a User into the application.
 	 *
 	 * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
 	 * @param  bool  $remember
@@ -75,7 +75,7 @@ interface Guard {
 	public function login(Authenticatable $user, $remember = false);
 
 	/**
-	 * Log the given user ID into the application.
+	 * Log the given User ID into the application.
 	 *
 	 * @param  mixed  $id
 	 * @param  bool   $remember
@@ -84,14 +84,14 @@ interface Guard {
 	public function loginUsingId($id, $remember = false);
 
 	/**
-	 * Determine if the user was authenticated via "remember me" cookie.
+	 * Determine if the User was authenticated via "remember me" cookie.
 	 *
 	 * @return bool
 	 */
 	public function viaRemember();
 
 	/**
-	 * Log the user out of the application.
+	 * Log the User out of the application.
 	 *
 	 * @return void
 	 */

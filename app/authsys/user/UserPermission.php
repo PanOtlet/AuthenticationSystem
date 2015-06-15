@@ -3,7 +3,7 @@
  * Author: PanOtlet
  */
 
-namespace authsys\user;
+namespace Authsys\User;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
 

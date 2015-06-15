@@ -42,7 +42,7 @@ namespace Slim\Middleware;
  *
  * You should NEVER store sensitive data in a client-side cookie
  * in any format, encrypted (with cookies.encrypt) or not. If you
- * need to store sensitive user information in a session, you should
+ * need to store sensitive User information in a session, you should
  * rely on PHP's native session implementation, or use other middleware
  * to store session data in a database or alternative server-side cache.
  *

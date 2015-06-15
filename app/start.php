@@ -16,12 +16,12 @@ use Noodlehaus\Config;
 use RandomLib\Factory as RandomLib;
 
 //Own
-use authsys\user\User;
-use authsys\helpers\hash;
-use authsys\mail\Mailer;
-use authsys\validation\Validator;
-use authsys\middleware\BeforeMiddleware;
-use authsys\middleware\CsrfMiddleware;
+use Authsys\user\User;
+use Authsys\Helpers\Hash;
+use Authsys\Mail\Mailer;
+use Authsys\Validation\Validator;
+use Authsys\Middleware\BeforeMiddleware;
+use Authsys\Middleware\CsrfMiddleware;
 
 session_cache_limiter(false);
 session_start();

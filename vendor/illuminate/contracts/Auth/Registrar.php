@@ -11,7 +11,7 @@ interface Registrar {
 	public function validator(array $data);
 
 	/**
-	 * Create a new user instance after a valid registration.
+	 * Create a new User instance after a valid registration.
 	 *
 	 * @param  array  $data
 	 * @return User

@@ -3,7 +3,7 @@
  * Author: PanOtlet
  */
 
-namespace authsys\middleware;
+namespace Authsys\Middleware;
 
 use Exception;
 use Slim\Middleware;

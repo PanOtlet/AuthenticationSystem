@@ -4,7 +4,7 @@
  * ---------------
  * This set of functions allows you to filter html in order to remove
  * any malicious tags from it. Useful in cases when you need to filter
- * user input for any cross-site-scripting attempts.
+ * User input for any cross-site-scripting attempts.
  *
  * Copyright (C) 2002-2004 by Duke University
  *

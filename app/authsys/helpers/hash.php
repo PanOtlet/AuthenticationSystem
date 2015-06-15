@@ -3,7 +3,7 @@
  * Author: PanOtlet
  */
 
-namespace authsys\helpers;
+namespace Authsys\Helpers;
 
 class hash{
 

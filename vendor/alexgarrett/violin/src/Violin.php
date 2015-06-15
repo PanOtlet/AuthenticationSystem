@@ -20,7 +20,7 @@ class Violin implements ValidatorContract
     protected $usedRules = [];
 
     /**
-     * Custom user-defined rules
+     * Custom User-defined rules
      *
      * @var array
      */

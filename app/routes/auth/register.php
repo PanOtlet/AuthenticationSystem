@@ -3,7 +3,7 @@
  * Author: PanOtlet
  */
 
-use authsys\user\UserPermission;
+use Authsys\User\UserPermission;
 
 $app->get('/register', $guest(), function() use ($app){
     $app->render('auth/register.twig');

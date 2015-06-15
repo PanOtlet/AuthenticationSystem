@@ -20,7 +20,7 @@ class Password extends Facade {
 	const PASSWORD_RESET = 'passwords.reset';
 
 	/**
-	 * Constant representing the user not found response.
+	 * Constant representing the User not found response.
 	 *
 	 * @var string
 	 */

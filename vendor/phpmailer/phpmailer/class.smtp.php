@@ -192,7 +192,7 @@ class SMTP
     protected $last_reply = '';
 
     /**
-     * Output debugging info via a user-selected method.
+     * Output debugging info via a User-selected method.
      * @see SMTP::$Debugoutput
      * @see SMTP::$do_debug
      * @param string $str Debug string to output
@@ -351,7 +351,7 @@ class SMTP
      * Perform SMTP authentication.
      * Must be run after hello().
      * @see hello()
-     * @param string $username    The user name
+     * @param string $username    The User name
      * @param string $password    The password
      * @param string $authtype    The auth type (PLAIN, LOGIN, NTLM, CRAM-MD5)
      * @param string $realm       The auth realm for NTLM

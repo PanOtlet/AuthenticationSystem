@@ -171,7 +171,7 @@ class Twig_Extension_Core extends Twig_Extension
             new Twig_SimpleFilter('trim', 'trim'),
             new Twig_SimpleFilter('nl2br', 'nl2br', array('pre_escape' => 'html', 'is_safe' => array('html'))),
 
-            // array helpers
+            // array Helpers
             new Twig_SimpleFilter('join', 'twig_join_filter'),
             new Twig_SimpleFilter('split', 'twig_split_filter', array('needs_environment' => true)),
             new Twig_SimpleFilter('sort', 'twig_sort_filter'),
@@ -493,7 +493,7 @@ function twig_date_modify_filter(Twig_Environment $env, $date, $modifier)
  * Converts an input to a DateTime instance.
  *
  * <pre>
- *    {% if date(user.created_at) < date('+2days') %}
+ *    {% if date(User.created_at) < date('+2days') %}
  *      {# do something #}
  *    {% endif %}
  * </pre>

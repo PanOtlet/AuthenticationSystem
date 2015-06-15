@@ -655,7 +655,7 @@ class PHPMailer
     }
 
     /**
-     * Output debugging info via user-defined method.
+     * Output debugging info via User-defined method.
      * Only generates output if SMTP debug output is enabled (@see SMTP::$do_debug).
      * @see PHPMailer::$Debugoutput
      * @see PHPMailer::$SMTPDebug

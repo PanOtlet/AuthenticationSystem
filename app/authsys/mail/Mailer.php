@@ -3,7 +3,7 @@
  * Author: PanOtlet
  */
 
-namespace authsys\mail;
+namespace Authsys\Mail;
 
 class Mailer{
     protected $mailer;

@@ -3,14 +3,14 @@
 interface Authenticatable {
 
 	/**
-	 * Get the unique identifier for the user.
+	 * Get the unique identifier for the User.
 	 *
 	 * @return mixed
 	 */
 	public function getAuthIdentifier();
 
 	/**
-	 * Get the password for the user.
+	 * Get the password for the User.
 	 *
 	 * @return string
 	 */

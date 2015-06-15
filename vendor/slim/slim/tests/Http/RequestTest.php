@@ -925,7 +925,7 @@ class RequestTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test get user agent string
+     * Test get User agent string
      */
     public function testGetUserAgent()
     {
@@ -937,7 +937,7 @@ class RequestTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test get user agent string when not set
+     * Test get User agent string when not set
      */
     public function testGetUserAgentWhenNotExists()
     {

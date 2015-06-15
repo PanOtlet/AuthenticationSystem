@@ -3,11 +3,11 @@
  * Author: PanOtlet
  */
 
-namespace authsys\validation;
+namespace Authsys\Validation;
 
 use Violin\Violin;
-use authsys\user\user;
-use authsys\helpers\hash;
+use Authsys\User\User;
+use Authsys\Helpers\Hash;
 
 class Validator extends Violin {
 
