@@ -10,7 +10,7 @@
  */
 
 /**
- * Represents a callable templates filter.
+ * Represents a callable template filter.
  *
  * Use Twig_SimpleFilter instead.
  *

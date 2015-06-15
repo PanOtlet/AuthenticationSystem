@@ -10,7 +10,7 @@
  */
 
 /**
- * Represents a templates function as a node.
+ * Represents a template function as a node.
  *
  * Use Twig_SimpleFunction instead.
  *

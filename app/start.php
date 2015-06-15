@@ -16,7 +16,7 @@ use Noodlehaus\Config;
 use RandomLib\Factory as RandomLib;
 
 //Own
-use Authsys\user\User;
+use Authsys\User\User;
 use Authsys\Helpers\Hash;
 use Authsys\Mail\Mailer;
 use Authsys\Validation\Validator;

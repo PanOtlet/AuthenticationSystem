@@ -84,7 +84,7 @@ class Twig_Tests_ParserTest extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException Twig_Error_Syntax
-     * @expectedExceptionMessage A templates that extends another one cannot have a body but a byte order mark (BOM) has been detected; it must be removed at line 1.
+     * @expectedExceptionMessage A template that extends another one cannot have a body but a byte order mark (BOM) has been detected; it must be removed at line 1.
      */
     public function testFilterBodyNodesWithBOM()
     {
@@ -115,7 +115,7 @@ class Twig_Tests_ParserTest extends PHPUnit_Framework_TestCase
         $this->assertNull($parser->getParent());
     }
 
-    // The getVarName() must not depend on the templates loaders,
+    // The getVarName() must not depend on the template loaders,
     // If this test does not throw any exception, that's good.
     // see https://github.com/symfony/symfony/issues/4218
     public function testGetVarName()
@@ -159,7 +159,7 @@ class TestTokenParser extends Twig_TokenParser
 {
     public function parse(Twig_Token $token)
     {
-        // simulate the parsing of another templates right in the middle of the parsing of the current templates
+        // simulate the parsing of another template right in the middle of the parsing of the current template
         $this->parser->parse(new Twig_TokenStream(array(
             new Twig_Token(Twig_Token::BLOCK_START_TYPE, '', 1),
             new Twig_Token(Twig_Token::NAME_TYPE, 'extends', 1),

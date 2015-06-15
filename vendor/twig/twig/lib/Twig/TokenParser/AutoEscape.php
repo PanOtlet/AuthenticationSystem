@@ -10,7 +10,7 @@
  */
 
 /**
- * Marks a section of a templates to be escaped or not.
+ * Marks a section of a template to be escaped or not.
  *
  * <pre>
  * {% autoescape true %}

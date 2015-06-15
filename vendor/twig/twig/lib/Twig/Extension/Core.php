@@ -171,7 +171,7 @@ class Twig_Extension_Core extends Twig_Extension
             new Twig_SimpleFilter('trim', 'trim'),
             new Twig_SimpleFilter('nl2br', 'nl2br', array('pre_escape' => 'html', 'is_safe' => array('html'))),
 
-            // array Helpers
+            // array helpers
             new Twig_SimpleFilter('join', 'twig_join_filter'),
             new Twig_SimpleFilter('split', 'twig_split_filter', array('needs_environment' => true)),
             new Twig_SimpleFilter('sort', 'twig_sort_filter'),
@@ -493,7 +493,7 @@ function twig_date_modify_filter(Twig_Environment $env, $date, $modifier)
  * Converts an input to a DateTime instance.
  *
  * <pre>
- *    {% if date(User.created_at) < date('+2days') %}
+ *    {% if date(user.created_at) < date('+2days') %}
  *      {# do something #}
  *    {% endif %}
  * </pre>
@@ -921,7 +921,9 @@ function twig_reverse_filter(Twig_Environment $env, $item, $preserveKeys = false
 /**
  * Sorts an array.
  *
- * @param array $array An array
+ * @param array $array
+ *
+ * @return array
  */
 function twig_sort_filter($array)
 {
@@ -952,6 +954,8 @@ function twig_in_filter($value, $compare)
  * @param string           $strategy   The escaping strategy
  * @param string           $charset    The charset
  * @param bool             $autoescape Whether the function is called by the auto-escaping feature (true) or by the developer (false)
+ *
+ * @return string
  */
 function twig_escape_filter(Twig_Environment $env, $string, $strategy = 'html', $charset = null, $autoescape = false)
 {
@@ -1396,15 +1400,17 @@ function twig_test_iterable($value)
 }
 
 /**
- * Renders a templates.
+ * Renders a template.
  *
- * @param string|array $template       The templates to render or an array of templates to try consecutively
- * @param array        $variables      The variables to pass to the templates
- * @param bool         $with_context   Whether to pass the current context variables or not
- * @param bool         $ignore_missing Whether to ignore missing templates or not
- * @param bool         $sandboxed      Whether to sandbox the templates or not
+ * @param Twig_Environment $env
+ * @param array            $context
+ * @param string|array     $template      The template to render or an array of templates to try consecutively
+ * @param array            $variables     The variables to pass to the template
+ * @param bool             $withContext
+ * @param bool             $ignoreMissing Whether to ignore missing templates or not
+ * @param bool             $sandboxed     Whether to sandbox the template or not
  *
- * @return string The rendered templates
+ * @return string The rendered template
  */
 function twig_include(Twig_Environment $env, $context, $template, $variables = array(), $withContext = true, $ignoreMissing = false, $sandboxed = false)
 {
@@ -1435,11 +1441,11 @@ function twig_include(Twig_Environment $env, $context, $template, $variables = a
 }
 
 /**
- * Returns a templates content without rendering it.
+ * Returns a template content without rendering it.
  *
- * @param string $name The templates name
+ * @param string $name The template name
  *
- * @return string The templates source
+ * @return string The template source
  */
 function twig_source(Twig_Environment $env, $name)
 {

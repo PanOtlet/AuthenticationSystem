@@ -10,7 +10,7 @@
  */
 
 /**
- * Represents a templates filter as a node.
+ * Represents a template filter as a node.
  *
  * Use Twig_SimpleFilter instead.
  *

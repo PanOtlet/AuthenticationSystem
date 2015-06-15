@@ -13,15 +13,15 @@
  * Twig base exception.
  *
  * This exception class and its children must only be used when
- * an error occurs during the loading of a templates, when a syntax error
- * is detected in a templates, or when rendering a templates. Other
- * errors must use regular PHP exception classes (like when the templates
+ * an error occurs during the loading of a template, when a syntax error
+ * is detected in a template, or when rendering a template. Other
+ * errors must use regular PHP exception classes (like when the template
  * cache directory is not writable for instance).
  *
- * To help debugging templates issues, this class tracks the original templates
+ * To help debugging template issues, this class tracks the original template
  * name and line where the error occurred.
  *
- * Whenever possible, you must set these information (original templates name
+ * Whenever possible, you must set these information (original template name
  * and line number) yourself by passing them to the constructor. If some or all
  * these information are not available from where you throw the exception, then
  * this class will guess them automatically (when the line number is set to -1
@@ -42,7 +42,7 @@ class Twig_Error extends Exception
      * Constructor.
      *
      * Set both the line number and the filename to false to
-     * disable automatic guessing of the original templates name
+     * disable automatic guessing of the original template name
      * and line number.
      *
      * Set the line number to -1 to enable its automatic guessing.
@@ -51,8 +51,8 @@ class Twig_Error extends Exception
      * By default, automatic guessing is enabled.
      *
      * @param string    $message  The error message
-     * @param int       $lineno   The templates line where the error occurred
-     * @param string    $filename The templates file name where the error occurred
+     * @param int       $lineno   The template line where the error occurred
+     * @param string    $filename The template file name where the error occurred
      * @param Exception $previous The previous exception
      */
     public function __construct($message, $lineno = -1, $filename = null, Exception $previous = null)
@@ -109,9 +109,9 @@ class Twig_Error extends Exception
     }
 
     /**
-     * Gets the templates line where the error occurred.
+     * Gets the template line where the error occurred.
      *
-     * @return int The templates line
+     * @return int The template line
      */
     public function getTemplateLine()
     {
@@ -119,9 +119,9 @@ class Twig_Error extends Exception
     }
 
     /**
-     * Sets the templates line where the error occurred.
+     * Sets the template line where the error occurred.
      *
-     * @param int $lineno The templates line
+     * @param int $lineno The template line
      */
     public function setTemplateLine($lineno)
     {
@@ -205,7 +205,7 @@ class Twig_Error extends Exception
             }
         }
 
-        // update templates filename
+        // update template filename
         if (null !== $template && null === $this->filename) {
             $this->filename = $template->getTemplateName();
         }
@@ -238,7 +238,7 @@ class Twig_Error extends Exception
 
                 foreach ($template->getDebugInfo() as $codeLine => $templateLine) {
                     if ($codeLine <= $trace['line']) {
-                        // update templates line
+                        // update template line
                         $this->lineno = $templateLine;
 
                         return;

@@ -10,7 +10,7 @@
  */
 
 /**
- * Embeds a templates.
+ * Embeds a template.
  */
 class Twig_TokenParser_Embed extends Twig_TokenParser_Include
 {

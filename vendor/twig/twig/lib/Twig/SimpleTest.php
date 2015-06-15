@@ -10,7 +10,7 @@
  */
 
 /**
- * Represents a templates test.
+ * Represents a template test.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */

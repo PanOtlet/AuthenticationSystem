@@ -17,20 +17,20 @@
 interface Twig_LoaderInterface
 {
     /**
-     * Gets the source code of a templates, given its name.
+     * Gets the source code of a template, given its name.
      *
-     * @param string $name The name of the templates to load
+     * @param string $name The name of the template to load
      *
-     * @return string The templates source code
+     * @return string The template source code
      *
      * @throws Twig_Error_Loader When $name is not found
      */
     public function getSource($name);
 
     /**
-     * Gets the cache key to use for the cache for a given templates name.
+     * Gets the cache key to use for the cache for a given template name.
      *
-     * @param string $name The name of the templates to load
+     * @param string $name The name of the template to load
      *
      * @return string The cache key
      *
@@ -39,12 +39,13 @@ interface Twig_LoaderInterface
     public function getCacheKey($name);
 
     /**
-     * Returns true if the templates is still fresh.
+     * Returns true if the template is still fresh.
      *
-     * @param string    $name The templates name
-     * @param timestamp $time The last modification time of the cached templates
+     * @param string    $name The template name
+     * @param int       $time Timestamp of the last modification time of the
+     *                        cached template
      *
-     * @return bool true if the templates is fresh, false otherwise
+     * @return bool true if the template is fresh, false otherwise
      *
      * @throws Twig_Error_Loader When $name is not found
      */

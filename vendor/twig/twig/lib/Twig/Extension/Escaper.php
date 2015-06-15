@@ -50,9 +50,9 @@ class Twig_Extension_Escaper extends Twig_Extension
     }
 
     /**
-     * Sets the default strategy to use when not defined by the User.
+     * Sets the default strategy to use when not defined by the user.
      *
-     * The strategy can be a valid PHP callback that takes the templates
+     * The strategy can be a valid PHP callback that takes the template
      * "filename" as an argument and returns the strategy to use.
      *
      * @param mixed $defaultStrategy An escaping strategy
@@ -72,11 +72,11 @@ class Twig_Extension_Escaper extends Twig_Extension
     }
 
     /**
-     * Gets the default strategy to use when not defined by the User.
+     * Gets the default strategy to use when not defined by the user.
      *
-     * @param string $filename The templates "filename"
+     * @param string $filename The template "filename"
      *
-     * @return string The default strategy to use for the templates
+     * @return string The default strategy to use for the template
      */
     public function getDefaultStrategy($filename)
     {
@@ -104,6 +104,8 @@ class Twig_Extension_Escaper extends Twig_Extension
  * Marks a variable as being safe.
  *
  * @param string $string A PHP variable
+ *
+ * @return string
  */
 function twig_raw_filter($string)
 {

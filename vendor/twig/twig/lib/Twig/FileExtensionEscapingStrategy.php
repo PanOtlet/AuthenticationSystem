@@ -25,7 +25,7 @@ class Twig_FileExtensionEscapingStrategy
     /**
      * Guesses the best autoescaping strategy based on the file name.
      *
-     * @param string $filename The templates file name
+     * @param string $filename The template file name
      *
      * @return string The escaping strategy name to use
      */

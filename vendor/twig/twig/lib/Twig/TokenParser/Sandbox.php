@@ -10,11 +10,11 @@
  */
 
 /**
- * Marks a section of a templates as untrusted code that must be evaluated in the sandbox mode.
+ * Marks a section of a template as untrusted code that must be evaluated in the sandbox mode.
  *
  * <pre>
  * {% sandbox %}
- *     {% include 'User.html' %}
+ *     {% include 'user.html' %}
  * {% endsandbox %}
  * </pre>
  *

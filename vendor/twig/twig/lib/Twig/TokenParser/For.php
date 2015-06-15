@@ -15,8 +15,8 @@
  *
  * <pre>
  * <ul>
- *  {% for User in users %}
- *    <li>{{ User.username|e }}</li>
+ *  {% for user in users %}
+ *    <li>{{ user.username|e }}</li>
  *  {% endfor %}
  * </ul>
  * </pre>
