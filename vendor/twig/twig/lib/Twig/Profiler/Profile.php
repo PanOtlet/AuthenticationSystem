@@ -16,7 +16,7 @@ class Twig_Profiler_Profile implements IteratorAggregate, Serializable
 {
     const ROOT = 'ROOT';
     const BLOCK = 'block';
-    const TEMPLATE = 'templates';
+    const TEMPLATE = 'template';
     const MACRO = 'macro';
 
     private $template;

@@ -6,8 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'authsys\\' => array($baseDir . '/app/authsys'),
     'Violin\\' => array($vendorDir . '/alexgarrett/violin/src'),
+    'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
     'Stringy\\' => array($vendorDir . '/danielstjules/stringy/src'),
     'Slim\\Views\\' => array($vendorDir . '/slim/views'),
     'Noodlehaus\\' => array($vendorDir . '/hassankhan/config/src'),
@@ -15,4 +15,5 @@ return array(
     'Illuminate\\Database\\' => array($vendorDir . '/illuminate/database'),
     'Illuminate\\Contracts\\' => array($vendorDir . '/illuminate/contracts'),
     'Illuminate\\Container\\' => array($vendorDir . '/illuminate/container'),
+    'Authsys\\' => array($baseDir . '/app/Authsys'),
 );

@@ -16,8 +16,8 @@
  * <pre>
  * {% if users %}
  *  <ul>
- *    {% for User in users %}
- *      <li>{{ User.username|e }}</li>
+ *    {% for user in users %}
+ *      <li>{{ user.username|e }}</li>
  *    {% endfor %}
  *  </ul>
  * {% endif %}
@@ -63,7 +63,7 @@ class Twig_TokenParser_If extends Twig_TokenParser
                     break;
 
                 default:
-                    throw new Twig_Error_Syntax(sprintf('Unexpected end of templates. Twig was looking for the following tags "else", "elseif", or "endif" to close the "if" block started at line %d)', $lineno), $stream->getCurrent()->getLine(), $stream->getFilename());
+                    throw new Twig_Error_Syntax(sprintf('Unexpected end of template. Twig was looking for the following tags "else", "elseif", or "endif" to close the "if" block started at line %d)', $lineno), $stream->getCurrent()->getLine(), $stream->getFilename());
             }
         }
 

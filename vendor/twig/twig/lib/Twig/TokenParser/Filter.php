@@ -10,7 +10,7 @@
  */
 
 /**
- * Filters a section of a templates by applying filters.
+ * Filters a section of a template by applying filters.
  *
  * <pre>
  * {% filter upper %}
