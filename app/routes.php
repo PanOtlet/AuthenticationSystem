@@ -2,7 +2,6 @@
 /**
  * Author: PanOtlet
  */
-
 foreach (glob(INC_ROOT."/app/routes/*.php") as $filename){
     require $filename;
 }
@@ -24,5 +23,9 @@ foreach (glob(INC_ROOT."/app/routes/admin/*.php") as $filename){
 }
 
 foreach (glob(INC_ROOT."/app/routes/errors/*.php") as $filename){
+    require $filename;
+}
+
+foreach (glob(INC_ROOT."/app/routes/account/*.php") as $filename){
     require $filename;
 }
