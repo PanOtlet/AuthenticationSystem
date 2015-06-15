@@ -25,9 +25,9 @@ $app->post('/login', $guest(), function() use ($app){
     if ($v->passes()){
         $user = $app->user
             ->where('active', true)
-            ->where('username', $identifier)
-            ->orWhere('email', $identifier)
-            ->first();
+            ->where(function($query) use ($identifier){
+                return $query->where('email', $identifier)->orWhere('username',$identifier);
+            })->first();
 
         if ($user && $app->hash->passwordCheck($password, $user->password)){
             $_SESSION[$app->config->get('auth.session')] = $user->id;
@@ -36,7 +36,10 @@ $app->post('/login', $guest(), function() use ($app){
                 $rememberIdentifier =   $app->randomLib->generateString(128);
                 $rememberToken      =   $app->randomLib->generateString(128);
 
-                $user->updateRememberCredentials($rememberIdentifier,$app->hash->hash($rememberToken));
+                $user->updateRememberCredentials(
+                    $rememberIdentifier,
+                    $app->hash->hash($rememberToken)
+                );
 
                 $app->setCookie(
                     $app->config->get('auth.remember'),
